@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
@@ -14,8 +15,23 @@
                 <li><a href="">LOGIN</a></li>
                 <li><a href="">REGISTRO</a></li>
             </ul>
+            <form class="formulario-busqueda" action="./results.html" method="get">
+                <input type="search" name="search" id="search" value="">
+                <button type="submit"> Buscar </button>
+                <p id="error-message" style="color: red;"></p>
+            </form>
         </nav>
     </header>
+
+    <main>
+        <h1> Bienvenido al sitio de recetas! </h1>
+        <p> Aqui encontraras las mejores recetas para tus comidas </p>
+
+        <section id="contenedor-recetas">
+          
+        </section>
+        <button id="cargar-mas">Cargar más</button>
+    </main>
 
     <footer>
         <nav>
@@ -30,6 +46,7 @@
             <h4>Proyecto Integrador de Martina Goyanes y Pilar Gomez</h4>
         </div>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/results.js"></script>
 </body>
 </html>
