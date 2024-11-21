@@ -8,13 +8,13 @@ formulario.addEventListener("submit", function (event) {
     let valor = campoBusqueda.value; 
     
     if (valor === "") {
-        event.preventDefault(); // Evitar el envío
+        event.preventDefault(); 
         mensajeError.innerText = "El campo no puede estar vacío.";
     } else if (valor.length < 3) {
         event.preventDefault(); 
         mensajeError.innerText = "El campo debe tener al menos 3 caracteres.";
     } else {
-    mensajeError.innerText = ""; // Borrar mensaje de error
+    mensajeError.innerText = ""; 
         }
 
 
@@ -25,4 +25,48 @@ let contenedorRecetas = document.querySelector("#contenedor-recetas");
 let botonVerMas = document.querySelector("#cargar-mas");
 let skip = 0;
 
-function cargarRecetas 
+
+function mostrarRecetas() {
+    
+    fetch ("https://dummyjson.com/recipes?limit=10&skip=0&select=name,image,difficulty"
+    )
+        .then(function (response) {
+            return response.json(); 
+        })
+        .then(function (data) {
+            let recetas = data.recipes;
+            console.log(data); 
+            let recetasHTML = "";
+
+            
+            for (let i = 0; i < recetas.length; i++) {
+                let receta = recetas[i]; 
+
+               
+                recetasHTML += `
+                    <div class="recipe">
+                        <img src="${receta.image}" alt="${receta.name}">
+                        <h2>${receta.name}</h2>
+                        <p><strong>Dificultad:</strong> ${receta.difficulty}</p>
+                        <a href="detalle.html?id=${receta.id}" class="details-link">Ver detalle</a>
+                    </div>
+                `;
+            }
+
+           contenedorRecetas.innerHTML += recetasHTML;
+
+           
+            skip += 10;
+        })
+        .catch(function (error) {
+            console.error("Error al cargar recetas:", error);
+        });
+}
+
+
+botonVerMas.addEventListener("click", mostrarRecetas);
+
+
+mostrarRecetas();
+
+
