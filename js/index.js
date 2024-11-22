@@ -69,4 +69,10 @@ botonVerMas.addEventListener("click", mostrarRecetas);
 
 mostrarRecetas();
 
+let estilos = document.querySelector('.contenedor-recetas');
+estilos.style.display = 'flex';
+estilos.style.flexWrap = 'wrap';
+estilos.style.justifyContent = 'center';
+estilos.style.gap = '15px';
+
 
