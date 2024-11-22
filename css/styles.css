@@ -6,11 +6,11 @@ body {
     background: rgb(252, 235, 251);
 }
 a {
-    /* Elimina color de links */
+    
     text-decoration: none;
 }
 li {
-    /* Elimina bullets */
+ 
     list-style-type: none;
 }
 
@@ -121,7 +121,7 @@ footer {
     text-align: center;
 }
 
-/*Recetas*/
+
 .contenedor-recetas {
     display: flex;
     gap: 20px;
@@ -148,6 +148,11 @@ footer {
 
 
 .receta img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
     width: 150px;
     height: auto;
     border-bottom: 1px solid #ddd;
@@ -168,7 +173,7 @@ footer {
 }
 
 
-.details-link {
+.detalle-link {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
@@ -179,16 +184,9 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.details-link:hover {
+.detalle-link:hover {
     background-color: #f6c3f8;
 }
-
-.recipe img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Asegúrate de que no esté en "none" */
-}
-
 
 .botonCargarMas {
     display: block;

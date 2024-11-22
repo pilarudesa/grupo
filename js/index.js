@@ -48,7 +48,7 @@ function mostrarRecetas() {
                         <img src="${receta.image}" alt="${receta.name}">
                         <h2>${receta.name}</h2>
                         <p><strong>Dificultad:</strong> ${receta.difficulty}</p>
-                        <a href="receta.html?id=${receta.id}" class="details-link">Ver detalle</a>
+                        <a href="receta.html?id=${receta.id}" class="detalle-link">Ver detalle</a>
                     </div>
                 `;
             }
