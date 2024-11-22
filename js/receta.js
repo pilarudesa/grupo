@@ -17,6 +17,14 @@ fetch (url)
     cookTimeMinutes.innerText += ` ${data.cookTimeMinutes}`
     let image = document.querySelector(".image")
     image.src = `${data.image}`
+    let tags = document.querySelector(".tags")
+
+    for (let i = 0; i < data.tags.length; i++) {
+        tags.innerHTML += ` <a href="./category.html?category=${data.tags[i]}">${data.tags[i]}</a>`
+        console.log(data.tags[i]);
+        
+        
+    }
 })
 .catch(function(error){
     console.log(error)
