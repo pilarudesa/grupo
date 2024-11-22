@@ -28,8 +28,8 @@ let skip = 0;
 
 function mostrarRecetas() {
     
-    fetch ("https://dummyjson.com/recipes?limit=10&skip=0&select=name,image,difficulty"
-    )
+    fetch ("https://dummyjson.com/recipes?limit=10&skip=0&select=name,image,difficulty")
+
         .then(function (response) {
             return response.json(); 
         })
@@ -48,7 +48,7 @@ function mostrarRecetas() {
                         <img src="${receta.image}" alt="${receta.name}">
                         <h2>${receta.name}</h2>
                         <p><strong>Dificultad:</strong> ${receta.difficulty}</p>
-                        <a href="detalle.html?id=${receta.id}" class="details-link">Ver detalle</a>
+                        <a href="receta.html?id=${receta.id}" class="details-link">Ver detalle</a>
                     </div>
                 `;
             }

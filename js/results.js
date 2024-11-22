@@ -19,12 +19,3 @@ else if (palabraBuscada.length < 3) {
 else {
     resultElement.innerText = `Resultados para: "${palabraBuscada}"`;
 }
-
-
-
-
-
-
-
-
-
