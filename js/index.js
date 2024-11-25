@@ -45,7 +45,7 @@ function mostrarRecetas() {
                
                 recetasHTML += `
                     <div class="recipe">
-                        <img src="${receta.image}" alt="${receta.name}">
+                        <img class="imagen-receta" src="${receta.image}" alt="${receta.name}">
                         <h2>${receta.name}</h2>
                         <p><strong>Dificultad:</strong> ${receta.difficulty}</p>
                         <a href="receta.html?id=${receta.id}" class="detalle-link">Ver detalle</a>
@@ -69,10 +69,5 @@ botonVerMas.addEventListener("click", mostrarRecetas);
 
 mostrarRecetas();
 
-let estilos = document.querySelector('.contenedor-recetas');
-estilos.style.display = 'flex';
-estilos.style.flexWrap = 'wrap';
-estilos.style.justifyContent = 'center';
-estilos.style.gap = '15px';
 
 

@@ -1,6 +1,6 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Tinos", serif;
     margin: 0;
     padding: 0;
     background: rgb(252, 235, 251);
@@ -14,7 +14,6 @@ li {
     list-style-type: none;
 }
 
-
 header {
     display: flex;
     justify-content: space-between;
@@ -24,15 +23,15 @@ header {
 }
 
 .navigation {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    flex-direction: column;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     height: 20px;
-    font-size: 15px;
 }
 
-.menu, .user {
+.menu {
     margin-right: 10px;
     margin-left: 10px;
     display: flex;
@@ -49,28 +48,25 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.navigation li a {
+
+.menu a {
     font-weight: bold;
 }
+
 
 header .logo img {
     height: 50px;
 }
 
-.navigation ul {
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
 
 header .formulario-busqueda {
+    align-items: center;
     display: flex;
     gap: 10px;
 }
 
 header .formulario-busqueda input {
-    padding: 5px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -85,6 +81,7 @@ header .formulario-busqueda button {
 
 .titulos {
     text-align: center;
+    color: #c38cc5;
 }
 
 footer {
@@ -95,75 +92,28 @@ footer {
     padding: 10px 20px;
 }
 
-.footer1 {
-    padding-top: 5px;
-    flex-direction: column;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    height: 20px;
-}
-
-.menu2 {
-    display: flex;
-    font-size: 15px;
-    gap: 30px
-}
-
-.menu2 a {
-    font-weight: bold;
-}
-
 .texto_footer {
     margin-top: 20px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    color: #c38cc5;
 }
 
-
-.receta {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.receta:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.receta img {
+.contenedor-recetas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    width: 150px;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 20px;
 }
 
+.imagen-receta {
+    max-width: 300px;
+    border-radius: 8px;
+    padding: 10px;
 
-.receta h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
 }
-
-
-.receta p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #555;
-}
-
-
 .detalle-link {
     display: inline-block;
     margin-top: 10px;
