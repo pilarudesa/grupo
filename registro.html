@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Registro</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -27,15 +24,27 @@
         </nav>
     </header>
 
-    <main class="titulos">
-        <h1> Bienvenido al sitio de recetas faciles y caseras </h1>
-        <h2>Aqui encontraras las mejores recetas para tus comidas </h2>
+    <div class="contenedor-registro">
+        <h2>Formulario de Registro</h2>
+        <form method="get" class="form-registro" action="">
+            <div class="form-class">
+                <input type="email" name="email" placeholder="Email" id="email" class="form-grupo">
+                <div id="invalid-email"></div>
+            </div> 
+            <div class="form-class">
+                <input type="password" name="password" placeholder="Contraseña" id="password" class="form-grupo">
+                <div id="invalid-password"></div>
+            </div>
+            <div class="form-class">
+                <input type="checkbox" name="validacion" value=""><label for="validacion">Terminos y condiciones</label>
+            </div>
+            <div class="form-class">
+                <a href="">Ya tengo una cuenta</a>
+            </div>
+            <a href=""><button type="submit">Enviar</button></a>
+        </form>
 
-        <section id="contenedor-recetas" class="contenedor-recetas">
-          
-        </section>
-        <button id="cargar-mas" class="botonCargarMas">Cargar más</button>
-    </main>
+    </div>
 
     <footer>
         <nav class="navigation">
@@ -51,7 +60,7 @@
             <h4>Proyecto Integrador de Martina Goyanes y Pilar Gomez</h4>
         </div>
     </footer>
-    <script src="./js/index.js"></script>
-    <script src="./js/results.js"></script>
+
+    <script src="./js/registro.js"></script>
 </body>
 </html>
