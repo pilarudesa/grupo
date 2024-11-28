@@ -1,6 +1,7 @@
 let queryString = location.search;
 let obj = new URLSearchParams(queryString)
 let palabraBuscada = obj.get("search")
+let resultElement = ""
 console.log(palabraBuscada);
 
 let resultado = document.querySelector(".result")
