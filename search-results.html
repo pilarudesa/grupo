@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Resultados de Busqueda </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Shadows+Into+Light&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header class="navegacion">
-        <nav class="menu">
-            <ul>
+    <header>
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="./index.html"><img class="logo" src="" alt=""></a></li>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./categories.html">CATEGORIAS</a></li>
                 <li><a href="./login.html">LOGIN</a></li>
-                <li><a href="./register.html">REGISTRO</a></li>
+                <li><a href="./registro.html">REGISTRO</a></li>
+            <form class="formulario-busqueda" action="./results.html" method="get">
+                <input type="search" name="search" id="search" value="">
+                <button type="submit"> Buscar </button>
+                <p id="error-message" style="color: red;"></p>
+            </form>
             </ul>
         </nav>
     </header>
@@ -23,9 +32,19 @@
         <section id="contenedor-resultados" class="contenedor-resultados"></section>
     </main>
 
-    <footer class="navegacion">
-        <div>
-            <p> Proyecto Inetgrador de Martina Goyanes y Pilar Gomez</p>
+    
+    <footer>
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="./index.html"><img class="logo" src="" alt=""></a></li>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./categories.html">CATEGORIAS</a></li>
+                <li><a href="./login.html">LOGIN</a></li>
+                <li><a href="./registro.html">REGISTRO</a></li>
+            </ul>
+        </nav>
+        <div class="texto_footer">
+            <h4>Proyecto Integrador de Martina Goyanes y Pilar Gomez</h4>
         </div>
     </footer>
     

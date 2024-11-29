@@ -17,8 +17,8 @@ fetch(url)
     for (let i = 0; i < data.recipes.length; i++) {
 
         tagsHTML.innerHTML += `
-                 <div class = "categorias">
-                    <p>Categories: ${data.recipes[i].tags}</p>
+                 <div class = "contenedor">
+                    <p class="titulo-por-categoria">Categoria: ${data.recipes[i].tags}</p>
                     <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}">
                     <h2>${data.recipes[i].name}</h2>
                     <p><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>

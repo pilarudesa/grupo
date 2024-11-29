@@ -14,9 +14,9 @@ li {
     list-style-type: none;
 }
 
+/*Menu*/
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: #f6c3f8;
     padding: 10px 20px;
@@ -62,7 +62,7 @@ header .logo img {
 header .formulario-busqueda {
     align-items: center;
     display: flex;
-    gap: 10px;
+    gap: 10px
 }
 
 header .formulario-busqueda input {
@@ -146,18 +146,91 @@ footer {
     background-color: #e66242;
 }
 
-.contenedor-login{
+/*Category*/
+.titulo-por-categoria {
+    font-size: 30px;
+    color: #c38cc5;
+    font-weight: bolder;
+}
+/*Receta*/ 
+.name {
+    font-size: 30px;
+    color: #c38cc5;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+/*Categories*/
+.titulo-categorias {
+    text-align: center;
+    font-size: 30px;
+    color: #c38cc5;
+    font-weight: bold;
+}
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid #a44cb5;
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Registro*/
+.contenedor-registro {
     background-color: white;
+    justify-content: center;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    align-items: center;
+    text-align: center;
+}
+.form-registro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-class {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+.boton-registro{
+    padding: 10px 15px;
+    border: none;
+    background-color:#a44cb5 ;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/*Login*/
+.contenedor-login{
+    background-color: white;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
     text-align: center;
 }
 
 .form-login{
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 15px;
 }
@@ -173,14 +246,11 @@ footer {
 .boton-login{
     padding: 10px 15px;
     border: none;
-    background-color:#007bff ;
+    background-color:#a44cb5 ;
     color: white;
     font-size: 16px;
     border-radius: 4px;
 }
 
-.boton-login:hoover{
-    background-color: #0056b3;
-}
 
 

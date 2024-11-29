@@ -24,11 +24,11 @@ formulario.addEventListener("submit", function (event) {
 let contenedorRecetas = document.querySelector("#contenedor-recetas");
 let botonVerMas = document.querySelector("#cargar-mas");
 let skip = 0;
-
+let url = `https://dummyjson.com/recipes?limit=10&skip=${skip}&select=name,image,difficulty`
 
 function mostrarRecetas() {
     
-    fetch ("https://dummyjson.com/recipes?limit=10&skip=0&select=name,image,difficulty")
+    fetch (url)
 
         .then(function (response) {
             return response.json(); 
@@ -65,7 +65,6 @@ function mostrarRecetas() {
 
 
 botonVerMas.addEventListener("click", mostrarRecetas);
-
 
 mostrarRecetas();
 

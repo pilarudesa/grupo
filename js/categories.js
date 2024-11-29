@@ -18,7 +18,7 @@ fetch(url)
 
         tagsHTML.innerHTML += `
                  <div class = "categorias">
-                    <p>Categories: <a href="./category.html?category=${data[i]}">${data[i]}</a> </p>
+                    <p><a href="./category.html?category=${data[i]}">${data[i]}</a> </p>
                 </div>
             `;
     }

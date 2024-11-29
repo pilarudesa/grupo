@@ -12,6 +12,8 @@ let contenedorResultadosHTML = "";
 
 resultadosTitulo.innerText = `Resultados de busqueda para: "${terminobuscado}"`;
 
+
+
 function buscarRecetas (){
     fetch(url)
     
@@ -29,8 +31,7 @@ function buscarRecetas (){
         let recetas = data.recipes;
 
         if (recetas.length == 0){
-            contenedorResultados.innerHTML += `No se encontraron coincidencias para "${searchTerm}"`;
-            return; 
+            contenedorResultados.innerHTML += `No se encontraron coincidencias para "${terminobuscado}"`;
         }
 
         for (let i = 0; i < recetas.length; i++) {
