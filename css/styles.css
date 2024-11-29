@@ -21,6 +21,9 @@ header {
     background-color: #f6c3f8;
     padding: 10px 20px;
 }
+.logo {
+    max-width: 150px;
+}
 
 .navigation {
     padding-top: 5px;
@@ -125,7 +128,7 @@ footer {
 }
 
 .detalle-link:hover {
-    background-color: #f6c3f8;
+    background-color: #e367d7;
 }
 
 .botonVerMas {
@@ -140,8 +143,13 @@ footer {
     
 }
 
+<<<<<<< HEAD
 .botonVerMas:hover {
     background-color: #e66242;
+=======
+.botonCargarMas:hover {
+    background-color: #e367d7;
+>>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405
 }
 
 /*Category*/
@@ -150,6 +158,9 @@ footer {
     color: #c38cc5;
     font-weight: bolder;
 }
+.imagen-categoria {
+    max-width: 400px;
+}
 /*Receta*/ 
 .name {
     font-size: 30px;
@@ -157,6 +168,9 @@ footer {
     font-weight: bolder;
     display: flex;
     justify-content: center;
+}
+.image {
+    max-width: 400px;
 }
 
 /*Categories*/
@@ -190,12 +204,19 @@ footer {
     max-width: 400px;
     align-items: center;
     text-align: center;
+    font-size: 20px;
 }
 .form-registro {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+<<<<<<< HEAD
     margin: 15px;
+=======
+    margin: 20px;
+    gap: 15px;
+>>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405
 }
 .form-class {
     padding: 10px;
@@ -211,6 +232,9 @@ footer {
     color: white;
     font-size: 16px;
     border-radius: 4px;
+}
+.boton-registro:hover {
+    background-color: #e367d7 ;
 }
 
 /*Login*/
@@ -249,6 +273,7 @@ footer {
     font-size: 16px;
     border-radius: 4px;
 }
+<<<<<<< HEAD
 
 /*Responsive para celular*/
 @media (max-width: 375px){ 
@@ -273,3 +298,8 @@ footer {
 
 
 
+=======
+.boton-login:hover {
+    background-color: #e367d7
+}
+>>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405
