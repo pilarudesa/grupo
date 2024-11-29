@@ -21,52 +21,59 @@ formulario.addEventListener("submit", function (event) {
     });
 
 
-let contenedorRecetas = document.querySelector("#contenedor-recetas");
-let botonVerMas = document.querySelector("#cargar-mas");
+let contenedorRecetas = document.querySelector(".seccion-recetas");
+let botonVerMas = document.querySelector(".botonVerMas");
 let skip = 0;
-let url = `https://dummyjson.com/recipes?limit=10&skip=${skip}&select=name,image,difficulty`
+let limit = 10;
+
 
 function mostrarRecetas() {
-    
+    let url = (`https://dummyjson.com/recipes?limit=${limit}&skip=${skip}`)
     fetch (url)
 
         .then(function (response) {
             return response.json(); 
         })
+
         .then(function (data) {
-            let recetas = data.recipes;
+            let recetas = contenedorRecetas.innerHTML;
             console.log(data); 
-            let recetasHTML = "";
-
             
-            for (let i = 0; i < recetas.length; i++) {
-                let receta = recetas[i]; 
 
-               
-                recetasHTML += `
-                    <div class="recipe">
-                        <img class="imagen-receta" src="${receta.image}" alt="${receta.name}">
-                        <h2>${receta.name}</h2>
-                        <p><strong>Dificultad:</strong> ${receta.difficulty}</p>
-                        <a href="receta.html?id=${receta.id}" class="detalle-link">Ver detalle</a>
-                    </div>
-                `;
+            recetas=""
+            for (let i = 0; i < data.recipes.length; i++) {
+                
+                recetas += `
+                    
+                    <article class="recipe">
+                        <img class="imagen-receta" src="${data.recipes[i].image}" alt="foto receta">
+                        <h2>${data.recipes[i].name}</h2>
+                        <p><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>
+                        <a href="receta.html?id=${data.recipes[i].id}" class="detalle-link">Ver detalle</a>
+                    </article>
+                `
             }
 
-           contenedorRecetas.innerHTML += recetasHTML;
+           contenedorRecetas.innerHTML = recetas;
 
            
-            skip += 10;
+            
         })
         .catch(function (error) {
-            console.error("Error al cargar recetas:", error);
+            console.error("Error al cargar recetas:" + error);
         });
 }
 
-
-botonVerMas.addEventListener("click", mostrarRecetas);
-
 mostrarRecetas();
+botonVerMas.addEventListener("click", function(){
+  
+    limit += 10 ;
+    mostrarRecetas();
+});
+
+
+
+
 
 
 

@@ -18,7 +18,7 @@
                 <li><a href="./categories.html">CATEGORIAS</a></li>
                 <li><a href="./login.html">LOGIN</a></li>
                 <li><a href="./register.html">REGISTRO</a></li>
-            <form class="formulario-busqueda" action="./results.html" action="./search-results.html" method="get">
+            <form class="formulario-busqueda" action="./search-results.html" action="./search-results.html" method="get">
                 <input type="search" name="search" id="search" value="">
                 <button type="submit"> Buscar </button>
                 <p id="error-message" style="color: red;"></p>
@@ -31,10 +31,12 @@
         <h1> Bienvenido al sitio de recetas faciles y caseras </h1>
         <h2>Aqui encontraras las mejores recetas para tus comidas </h2>
 
-        <section id="contenedor-recetas" class="contenedor-recetas">
-          
-        </section>
-        <button id="cargar-mas" class="botonCargarMas">Cargar más</button>
+        <section class="seccion-recetas"> </section>
+
+        <article class="articleBoton">
+            <button class="botonVerMas">Cargar más</button>   
+        </article>
+        
     </main>
 
     <footer>
@@ -52,6 +54,5 @@
         </div>
     </footer>
     <script src="./js/index.js"></script>
-    <script src="./js/results.js"></script>
 </body>
 </html>

@@ -34,10 +34,9 @@ header {
 .menu {
     margin-right: 10px;
     margin-left: 10px;
-    display: flex;
-    float: right;
+    display: flex;;
     font-size: 15px;
-    gap: 5px;
+    
 }
 
 .navigation li {
@@ -62,7 +61,7 @@ header .logo img {
 header .formulario-busqueda {
     align-items: center;
     display: flex;
-    gap: 10px
+    margin: 10px
 }
 
 header .formulario-busqueda input {
@@ -100,10 +99,10 @@ footer {
     color: #c38cc5;
 }
 
-.contenedor-recetas {
+.seccion-recetas {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    margin: 20px;
     justify-content: space-around;
     padding: 20px;
 }
@@ -121,15 +120,15 @@ footer {
     background-color: #f6c3f8;
     color: white;
     border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    font-size: 0.9;
+    
 }
 
 .detalle-link:hover {
     background-color: #f6c3f8;
 }
 
-.botonCargarMas {
+.botonVerMas {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -138,11 +137,10 @@ footer {
     background-color: #a44cb5;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 }
 
-.botonCargarMas:hover {
+.botonVerMas:hover {
     background-color: #e66242;
 }
 
@@ -171,7 +169,7 @@ footer {
 .categorias {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    margin: 15px;
     justify-content: center;
     padding: 20px;
     border: 2px solid #a44cb5;
@@ -197,7 +195,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    margin: 15px;
 }
 .form-class {
     padding: 10px;
@@ -232,7 +230,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 15px;
+    margin: 10px;
 }
 
 .clase-form{
@@ -250,6 +248,27 @@ footer {
     color: white;
     font-size: 16px;
     border-radius: 4px;
+}
+
+/*Responsive para celular*/
+@media (max-width: 375px){ 
+    /*creo que es un mobile M*/
+
+    body {
+        padding: 0 5vw;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding : 2vh 5vw
+    }
+
+    menu{
+        flex-direction: column;
+        font-size: 12px;
+        margin: ;
+    }
 }
 
 

@@ -3,12 +3,13 @@ let objeto = new URLSearchParams (queryString);
 let terminobuscado = objeto.get("search");
 console.log(terminobuscado);
 
-let url = `https://dummyjson.com/recipes/search?q=Margherita${terminobuscado}`
+let url = `https://dummyjson.com/recipes/search?q=${terminobuscado}`
 console.log(url);
 let resultadosTitulo = document.querySelector("#resultados-titulo");
-//let contenedorResultadosHTML = document.querySelector("#contenedor-resultados");
-let recetas = data ;
+let contenedorResultados = document.querySelector("#contenedor-resultados");
+
 let contenedorResultadosHTML = "";
+
 
 resultadosTitulo.innerText = `Resultados de busqueda para: "${terminobuscado}"`;
 
@@ -25,7 +26,7 @@ function buscarRecetas (){
     })
 
     .then(function(data){
-        console.log(data);
+
         
         console.log(data.recipes)
         let recetas = data.recipes;
@@ -35,6 +36,8 @@ function buscarRecetas (){
         }
 
         for (let i = 0; i < recetas.length; i++) {
+            console.log(recetas[i].name);
+            
             let receta = recetas[i];
 
             contenedorResultadosHTML  += `
@@ -47,7 +50,7 @@ function buscarRecetas (){
             
         }
 
-
+        contenedorResultados.innerHTML=contenedorResultadosHTML
 
     })
 
