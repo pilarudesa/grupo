@@ -42,9 +42,9 @@ function buscarRecetas (){
 
             contenedorResultadosHTML  += `
                     <div class="receta">
-                        <img src="${receta.image}" alt="${receta.name}">
-                        <h2>${receta.name}</h2>
-                        <a href="./detalle.html?id=${receta.id}">Ver detalle</a>
+                        <img class="imagen-search" src="${receta.image}" alt="${receta.name}">
+                        <h2 class="nombre-receta">${receta.name}</h2>
+                        <a href="receta.html?id=${data.recipes[i].id}" class="detalle-link">Ver detalle</a>
                     </div>
                 `;
             

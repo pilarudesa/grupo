@@ -20,7 +20,7 @@ fetch(url)
                  <div class = "contenedor">
                     <p class="titulo-por-categoria">Categoria: ${data.recipes[i].tags}</p>
                     <img class= "imagen-categoria" src="${data.recipes[i].image}" alt="${data.recipes[i].name}">
-                    <h2>${data.recipes[i].name}</h2>
+                    <h2 class= "nombre-receta">${data.recipes[i].name}</h2>
                     <p><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>
                     <a href="receta.html?id=${data.recipes[i].id}" class="detalle-link">Ver detalle</a>
                 </div>

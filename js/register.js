@@ -19,5 +19,8 @@ formulario.addEventListener('submit', function(event) {
         campoPassword.innerText = "Por favor complete el campo"
         campoPassword.style.color = "red"
     }
-    window.location.href = "./login.html"
+    else {
+        window.location.href = "./login.html"
+    }
+
 })

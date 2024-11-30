@@ -17,6 +17,7 @@ li {
 /*Menu*/
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #f6c3f8;
     padding: 10px 20px;
@@ -28,7 +29,6 @@ header {
 .navigation {
     padding-top: 5px;
     flex-direction: column;
-    padding: 20px 0;
     display: flex;
     align-items: center;
     height: 20px;
@@ -39,7 +39,7 @@ header {
     margin-left: 10px;
     display: flex;;
     font-size: 15px;
-    
+    align-items: center;
 }
 
 .navigation li {
@@ -71,6 +71,7 @@ header .formulario-busqueda input {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 header .formulario-busqueda button {
@@ -79,6 +80,9 @@ header .formulario-busqueda button {
     border-radius: 5px;
     background-color: #c38cc5;
     color: #fff;
+}
+header .formulario-busqueda button:hover {
+    background-color: #e367d7;
 }
 
 .titulos {
@@ -102,6 +106,7 @@ footer {
     color: #c38cc5;
 }
 
+/*Seccion Recetas */
 .seccion-recetas {
     display: flex;
     flex-wrap: wrap;
@@ -124,7 +129,6 @@ footer {
     color: white;
     border-radius: 5px;
     font-size: 0.9;
-    
 }
 
 .detalle-link:hover {
@@ -140,16 +144,10 @@ footer {
     background-color: #a44cb5;
     border: none;
     border-radius: 5px;
-    
 }
 
-<<<<<<< HEAD
 .botonVerMas:hover {
-    background-color: #e66242;
-=======
-.botonCargarMas:hover {
     background-color: #e367d7;
->>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405
 }
 
 /*Category*/
@@ -161,6 +159,12 @@ footer {
 .imagen-categoria {
     max-width: 400px;
 }
+.nombre-receta {
+    color: #c38cc5;
+}
+.contenedor {
+    text-align: center;
+}
 /*Receta*/ 
 .name {
     font-size: 30px;
@@ -169,14 +173,15 @@ footer {
     display: flex;
     justify-content: center;
 }
-.image {
+.image-receta {
     max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    height: auto;
 }
-
 /*Categories*/
 .titulo-categorias {
     text-align: center;
-    font-size: 30px;
     color: #c38cc5;
     font-weight: bold;
 }
@@ -194,6 +199,14 @@ footer {
 }
 
 /*Registro*/
+.contenedor-general-registro {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 .contenedor-registro {
     background-color: white;
     justify-content: center;
@@ -211,12 +224,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-<<<<<<< HEAD
     margin: 15px;
-=======
-    margin: 20px;
-    gap: 15px;
->>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405
 }
 .form-class {
     padding: 10px;
@@ -238,6 +246,14 @@ footer {
 }
 
 /*Login*/
+.contenedor-general-login {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 .contenedor-login{
     background-color: white;
     justify-content: center;
@@ -273,7 +289,19 @@ footer {
     font-size: 16px;
     border-radius: 4px;
 }
-<<<<<<< HEAD
+/*Search Results */
+.imagen-search {
+    max-width: 400px;
+    padding-top: 20px;
+}
+.contenedor-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-around;
+    padding: 20px;
+}
+
 
 /*Responsive para celular*/
 @media (max-width: 375px){ 
@@ -295,11 +323,3 @@ footer {
         margin: ;
     }
 }
-
-
-
-=======
-.boton-login:hover {
-    background-color: #e367d7
-}
->>>>>>> 22ea177603e8b5a621b86cf632ed6ba27b4d4405

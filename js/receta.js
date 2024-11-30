@@ -15,7 +15,7 @@ fetch (url)
     instructions.innerText += ` ${data.instructions}`
     let cookTimeMinutes = document.querySelector(".cookTimeMinutes")
     cookTimeMinutes.innerText += ` ${data.cookTimeMinutes}`
-    let image = document.querySelector(".image")
+    let image = document.querySelector(".image-receta")
     image.src = `${data.image}`
     let tags = document.querySelector(".tags")
 
